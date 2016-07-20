@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2> Edit Product {{edit.id}} </h2>
+<form action ='/update/{{edit.id}}' method ='POST'>
+	{% csrf_token %}
+	<p>Name: <input type ='text' name='product_name'></p>
+	<p>Description: <input type ='text' name='description'></p>
+	<p>Price <input type='text' name='price'></p>
+	<input type='submit' value='Update'>
+	</form>
+	<p><a href ='/show/{{person.id}}'> Show </a></p>
+	<p><a href ='/'> Go Back </a></p>
+
+
+</body>
+</html>

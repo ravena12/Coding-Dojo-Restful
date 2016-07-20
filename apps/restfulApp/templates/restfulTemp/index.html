@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2> Products </h2>
+<table>
+		<tr>
+			<th>Product Name</th>
+			<th>Description</th>
+			<th> Price </th>
+			<th> Actions </th>
+		</tr>
+		<td>
+			{% for item in products %}
+			<p> {{ item.name }} {{item.description}} {{ item.price}} <a href ='show/{{item.id}}'> Show </a>   <a href ='destroy/{{item.id}}'> Remove </a></p>
+			{% endfor %}
+		</td>
+	</table>
+	<input type='submit' value='Create'>
+	<a href ='/new'> Add a new product </a>
+
+
+
+</body>
+</html>
